@@ -1,0 +1,29 @@
+# EditorConfig 是帮助维护多个开发者之间代码风格一致性的文件。
+
+# 顶层 .editorconfig 文件声明适用于整个项目
+root = true
+
+# 默认配置
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+indent_style = space
+indent_size = 2
+
+# 针对 Markdown 文件的特殊配置
+[*.md]
+trim_trailing_whitespace = false
+
+# 针对 JSON 文件的特殊配置
+[*.json]
+indent_size = 2
+
+# 针对 HTML 文件的特殊配置
+[*.{html,htm}]
+indent_size = 2
+
+# 针对 CSS/SCSS/Less 文件的特殊配置
+[*.{css,scss,less}]
+indent_size = 2
