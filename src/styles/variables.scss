@@ -1,5 +1,10 @@
 $prefix: 'semi';
 
+// 圆角
+$border-radius: 0.25rem;
+$border-radius-sm: 0.2rem;
+$border-radius-lg: 0.3rem;
+
 /* sizing */
 $height-control-small: 24px; // 表单项高度 - 小尺寸
 $height-control-default: 32px; // 表单项高度 - 默认尺寸
@@ -71,3 +76,26 @@ $font-weight-regular: 400; // 字重 - 常规
 $font-weight-bold: 600; // 字重 - 加粗
 
 $line-height-regular: 16px; // 常规文本行高
+
+// 动画
+$ease-base-out: cubic-bezier(0.7, 0, 0.3, 1); // ease-out
+$ease-base-in: cubic-bezier(0.3, 0, 0.7, 1); // ease-in
+$ease-base-in-out: cubic-bezier(0.7, 0, 0.3, 1); // ease-in-out
+
+$ease-in-out: $ease-base-in-out; // ease-in-out
+$ease-in: $ease-base-in; // ease-in
+$ease-out: $ease-base-out; // ease-out
+
+$duration-base: 0.3s; // 动画时长 - 基础
+$duration-short: 0.2s; // 动画时长 - 短
+
+// 按钮相关
+
+$btn-padding-y: 0.375rem;
+$btn-padding-x: 0.75rem;
+$btn-padding-y-lg: 0.5rem;
+$btn-padding-x-lg: 1rem;
+$btn-font-size-lg: $font-size-regular * 1.25;
+$btn-padding-y-sm: 0.25rem;
+$btn-padding-x-sm: 0.5rem;
+$btn-font-size-sm: $font-size-small;

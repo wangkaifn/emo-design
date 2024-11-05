@@ -1,3 +1,5 @@
+@use './variables';
+
 @mixin shadow-elevated {
   box-shadow:
     0 0 1px rgba(0, 0, 0, 0.3),
@@ -79,5 +81,72 @@
     &::-webkit-scrollbar-track {
       // background-color: rgba(0, 0, 0, 0.05);
     }
+  }
+}
+
+@mixin btn {
+  @include shadow-0;
+  position: relative;
+  display: inline-block;
+  font-weight: $font-weight-regular;
+  white-space: nowrap;
+  text-align: center;
+  background-image: none;
+  border: $border-thickness-control solid transparent;
+  // box-shadow: $btn-shadow;
+  cursor: pointer;
+  transition: all 0.3s $ease-in-out;
+  user-select: none;
+  touch-action: manipulation;
+
+  &,
+  &:active,
+  &:focus {
+    outline: 0;
+  }
+
+  &:not([disabled]):hover {
+    text-decoration: none;
+  }
+
+  &:not([disabled]):active {
+    outline: 0;
+    box-shadow: none;
+  }
+
+  &[disabled],
+  &.disabled {
+    cursor: not-allowed;
+    pointer-events: none;
+
+    > * {
+      pointer-events: none;
+    }
+  }
+}
+
+@mixin btn-size($py, $px, $font-size, $border-radius) {
+  padding: $py $px;
+  font-size: $font-size;
+  border-radius: $border-radius;
+}
+// 背景色、文字颜色、边框颜色 hover  focus active
+@mixin btn-style(
+  $color,
+  $bg-color,
+  $border-color,
+  $hover-color,
+  $hover-bg-color,
+  $hover-border-color
+) {
+  color: $color;
+  background-color: $bg-color;
+  border-color: $border-color;
+
+  &:hover,
+  &:focus {
+    color: $hover-color;
+    background-color: $hover-bg-color;
+    border-color: $hover-border-color;
   }
 }

@@ -1,0 +1,111 @@
+/* stylelint-disable declaration-block-no-shorthand-property-overrides */
+@import '../../styles/variables';
+@import '../../styles/mixin';
+
+.btn {
+  @include btn;
+  @include btn-size(
+    $btn-padding-y,
+    $btn-padding-x,
+    $font-size-regular,
+    $border-radius
+  );
+}
+
+.btn-large {
+  @include btn-size(
+    $btn-padding-y-lg,
+    $btn-padding-x-lg,
+    $btn-font-size-lg,
+    $border-radius-lg
+  );
+}
+
+.btn-default {
+  @include btn-size(
+    $btn-padding-y,
+    $btn-padding-x,
+    $font-size-regular,
+    $border-radius
+  );
+  @include btn-style(
+    var(--color-text-0),
+    var(--color-fill-0),
+    var(--color-fill-0),
+    var(--color-text-3),
+    var(--color-default-hover),
+    var(--color-default-hover)
+  );
+}
+
+.btn-small {
+  @include btn-size(
+    $btn-padding-y-sm,
+    $btn-padding-x-sm,
+    $btn-font-size-sm,
+    $border-radius-sm
+  );
+}
+
+.btn-primary {
+  @include btn-style(
+    var(--color-white),
+    var(--color-primary),
+    var(--color-primary),
+    var(--color-white),
+    var(--color-primary-hover),
+    var(--color-primary-hover)
+  );
+}
+
+.btn-danger {
+  @include btn-style(
+    var(--color-white),
+    var(--color-danger),
+    var(--color-danger),
+    var(--color-white),
+    var(--color-danger-hover),
+    var(--color-danger-hover)
+  );
+}
+
+.btn-link {
+  color: var(--color-link);
+  text-decoration: none;
+
+  &:hover {
+    color: var(--color-link-hover);
+  }
+
+  &.disabled {
+    color: var(--color-disabled-text);
+  }
+}
+
+.spin {
+  animation: spin 1.5s infinite linear;
+}
+
+.loading {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: var(--color-white);
+    opacity: 0.35;
+    content: '';
+    inset: -1px;
+    pointer-events: none;
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(359deg);
+  }
+}

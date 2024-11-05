@@ -1,4 +1,4 @@
-@import url('./variables');
+@use './variables' as *;
 
 @mixin font-size-header-6 {
   font-size: 16px;

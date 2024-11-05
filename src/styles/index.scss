@@ -1,5 +1,10 @@
-@import './font';
-@import './mixin';
-@import './variables';
-@import './global';
-@import './local';
+@use './font';
+@use './mixin';
+@use './variables';
+@use './global';
+@use './local';
+
+@use '../styles/utility';
+
+// 组件样式
+@use '../components/Button/Button.scss';

@@ -1,4 +1,4 @@
-@import './palette';
+@use './palette' as *;
 
 body,
 body[theme-mode='dark'] .semi-always-light {
