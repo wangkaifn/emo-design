@@ -1,4 +1,4 @@
-import { Button } from './components'
+import { Button, Menu } from './components'
 import { Icon } from './components/Icon'
 
 function App() {
@@ -39,6 +39,36 @@ function App() {
         size={40}
         color="green"
       />
+
+      <h1>menu</h1>
+      <Menu
+        onSelect={val => {
+          console.log('onSelect', val)
+        }}
+      >
+        <Menu.Item>菜单1</Menu.Item>
+        <Menu.Item disabled>菜单2</Menu.Item>
+        <Menu.Item>菜单3</Menu.Item>
+      </Menu>
+      <h1>Sub Menus</h1>
+
+      <Menu
+        onSelect={val => {
+          console.log('onSelect', val)
+        }}
+        mode="vertical"
+        defaultOpenkeys={['1']}
+        defaultIndex="1"
+      >
+        <Menu.Item>菜单1</Menu.Item>
+        <Menu.SubMenu title="菜单2">
+          <Menu.Item>子菜单1</Menu.Item>
+          <Menu.Item>子菜单2</Menu.Item>
+          <Menu.Item>子菜单3</Menu.Item>
+        </Menu.SubMenu>
+        <Menu.Item disabled>菜单3</Menu.Item>
+        <Menu.Item>菜单4</Menu.Item>
+      </Menu>
     </main>
   )
 }
