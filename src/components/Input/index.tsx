@@ -53,7 +53,7 @@ const Input: React.FunctionComponent<IInputProps> = props => {
         />
         {allowClear && (
           <span ref={hoverRef} className="clear-icon" onClick={handleClear}>
-            {value?.trim().length > 0 && (
+            {value && value?.trim()?.length > 0 && (
               <Icon
                 type="bs"
                 icon="BsXCircleFill"
