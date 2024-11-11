@@ -1,4 +1,4 @@
-import { Button, Menu } from './components'
+import { Button, Input, Menu } from './components'
 import { Icon } from './components/Icon'
 
 function App() {
@@ -69,6 +69,32 @@ function App() {
         <Menu.Item disabled>菜单3</Menu.Item>
         <Menu.Item>菜单4</Menu.Item>
       </Menu>
+
+      <h1>Input 示例</h1>
+      <Input type="text" placeholder="请输入内容" />
+      <h1>input size</h1>
+      <Input size="small" placeholder="samll" />
+      <Input size="large" placeholder="large" />
+      <Input size="default" placeholder="default" />
+      <h1>input addon</h1>
+      <Input addonBefore="http://" addonAfter=".com" placeholder="请输入内容" />
+      <br />
+      <Input addonBefore="http://" placeholder="请输入内容" />
+      <Input addonAfter=".com" placeholder="请输入内容" />
+
+      <h1>input suffix prefix </h1>
+      <Input
+        suffix={<Icon icon="FaSearch" size={20} color="blue" />}
+        placeholder="suffix"
+      />
+      <Input
+        allowClear
+        prefix={<Icon icon="FaSearch" size={20} color="blue" />}
+        placeholder="prefix"
+      />
+      <Input disabled placeholder="disabled" />
+
+      <Input allowClear placeholder="clearable" />
     </main>
   )
 }
