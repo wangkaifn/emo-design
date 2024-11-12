@@ -1,28 +1,36 @@
 {
-  "name": "vite-react-ts-lib-starter",
+  "name": "emo-design",
   "version": "0.0.1",
-  "private": true,
+  "private": false,
   "bugs": {
-    "url": "https://github.com/wangkaifn/vite-react-ts-lib-starter.git/issues"
+    "url": "https://github.com/wangkaifn/emo-design.git/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/wangkaifn/vite-react-ts-lib-starter.git"
+    "url": "https://github.com/wangkaifn/emo-design.git"
   },
   "author": {
     "name": "阿凯",
     "email": "wangkaif2e@gmail.com",
     "url": "https://github.com/wangkaifn"
   },
+  "license": "MIT",
+  "description": "react组件库学习测试",
+  "keywords": [
+    "react",
+    "组件库",
+    "ui",
+    "components"
+  ],
   "type": "module",
   "exports": {
     ".": {
-      "import": "./dist/ak-design.js",
-      "require": "./dist/ak-design.umd.cjs"
+      "import": "./dist/emo-design.js",
+      "require": "./dist/emo-design.umd.cjs"
     }
   },
-  "main": "./dist/ak-design.umd.cjs",
-  "module": "./dist/ak-design.js",
+  "main": "./dist/emo-design.umd.cjs",
+  "module": "./dist/emo-design.js",
   "files": [
     "dist"
   ],

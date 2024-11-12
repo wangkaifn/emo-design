@@ -12,9 +12,9 @@ export default defineConfig({
     lib: {
       // Could also be a dictionary or array of multiple entry points
       entry: resolve(__dirname, 'src/components/index.tsx'),
-      name: 'AKDesign',
+      name: 'EMO',
       // the proper extensions will be added
-      fileName: format => `ak-design.${format}.js`,
+      fileName: format => `emo-design.${format}.js`,
     },
     rollupOptions: {
       // 确保外部化处理那些你不想打包进库的依赖

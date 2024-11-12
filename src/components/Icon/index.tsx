@@ -1,5 +1,5 @@
 import classNames from 'classnames'
-import IconTypeMap, { IconName, IconType } from './icons'
+import IconTypeMap, { IconType } from './icons'
 import { IconProps } from './type'
 
 const customCache = new Set<string>()
