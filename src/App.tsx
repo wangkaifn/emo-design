@@ -1,4 +1,4 @@
-import { Button, Input, Menu } from './components'
+import { Button, Input, Menu, AutoComplete } from './components'
 import { Icon } from './components/Icon'
 
 function App() {
@@ -95,6 +95,99 @@ function App() {
       <Input disabled placeholder="disabled" />
 
       <Input allowClear placeholder="clearable" />
+
+      <h1>AutoComplete</h1>
+      <AutoComplete
+        options={[
+          'ceshi',
+          'ceshi1',
+          'ceshi2',
+          'ceshi3',
+          'ceshi4',
+          'ceshi5',
+          'abc',
+          'abc1',
+        ]}
+        placeholder="测试 "
+      ></AutoComplete>
+      <AutoComplete
+        options={[
+          {
+            label: 'ceshi',
+            value: 'ceshi',
+            id: 1,
+          },
+          {
+            label: 'ceshi1',
+            value: 'ceshi1',
+            id: 2,
+          },
+          {
+            label: 'ceshi2',
+            value: 'ceshi2',
+            id: 3,
+          },
+          {
+            label: 'ceshi3',
+            value: 'ceshi3',
+            id: 4,
+          },
+          {
+            label: 'apple',
+            value: 'apple',
+            id: 5,
+          },
+          {
+            label: 'banana',
+            value: 'banana',
+            id: 6,
+          },
+        ]}
+        placeholder="测试 "
+        onSelect={val => {
+          console.log('onSelect', val)
+        }}
+      ></AutoComplete>
+      <AutoComplete placeholder="disabled" disabled></AutoComplete>
+      <AutoComplete
+        placeholder="过滤"
+        filterOptions={(inputValue, option) => {
+          return !option.includes(inputValue)
+        }}
+        options={[
+          {
+            label: 'apple',
+            value: 'apple',
+            id: 5,
+          },
+          {
+            label: 'banana',
+            value: 'banana',
+            id: 6,
+          },
+        ]}
+      ></AutoComplete>
+
+      <AutoComplete
+        placeholder="过滤 + 自定义render"
+        filterOptions={(inputValue, option) => {
+          return !option.includes(inputValue)
+        }}
+        autoFocus
+        options={[
+          'ai',
+          'ceshi1',
+          'ceshi2',
+          'ceshi3',
+          'ceshi4',
+          'ceshi5',
+          'abc',
+          'abc1',
+        ]}
+        render={option => {
+          return <h1>{typeof option === 'string' ? option : option.label}</h1>
+        }}
+      ></AutoComplete>
     </main>
   )
 }
